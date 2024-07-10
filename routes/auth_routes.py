@@ -14,6 +14,7 @@ key=os.getenv('SECRET_JWT_KEY')
 
 # route for logging user in
 @auth_routes.route('/login', methods =['POST'])
+@token_required(key, requires_admin=True)
 def login():
     # creates dictionary of form data
     data = json.loads(request.data)

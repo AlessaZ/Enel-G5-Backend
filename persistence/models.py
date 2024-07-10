@@ -26,8 +26,6 @@ class User(db.Model):
 
 class Device(db.Model):
     __tablename__ = 'devices'
-    idQR = db.Column(db.String(45), primary_key = True)
-    idLnms = db.Column(db.String(45))
-    name = db.Column(db.String(45))
+    idLnms = db.Column(db.String(45), primary_key = True)
     updated_on = db.Column(db.DateTime, default=datetime.utcnow)
     data = db.Column(db.Text)       

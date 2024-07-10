@@ -1,5 +1,5 @@
 import requests
-from connection import librenms_api
+from librenms.connection import librenms_api
 
 # Función para obtener información de los dispositivos
 def get_devices():

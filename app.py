@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from routes.auth_routes import auth_routes
-from routes.recurso_routes import recurso_routes
+from routes.devices_routes import devices_routes
 from dotenv import load_dotenv
 from persistence.models import db
 import os
@@ -15,6 +15,6 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 
 app.register_blueprint(auth_routes, url_prefix='/auth')
-app.register_blueprint(recurso_routes,url_prefix='/recurso')
+app.register_blueprint(devices_routes, url_prefix='/device')
 
 db.init_app(app)

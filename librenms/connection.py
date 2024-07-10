@@ -1,4 +1,4 @@
-from instance import LibreNMSAPI
+from librenms.instance import LibreNMSAPI
 import os
 
 # Configurar la URL de la API de LibreNMS y el token de API
